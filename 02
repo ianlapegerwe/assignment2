@@ -1,0 +1,84 @@
+<html>
+<head></head>
+<style>
+    #stand{
+        position: absolute;
+        top: 80%;
+        left: 25%;
+        width: 50%;
+        height: 20%;
+        background-color: black;
+        transform: perspective(2em) rotateX(10deg);
+    }
+    #globe{
+        position: absolute;
+        top: 15vmin;
+        left: 25vmin;
+        width: 70vmin;
+        height: 70vmin;
+        border-radius: 50%;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+        #square3{
+        position: absolute;
+        top: 35vmin;
+        left: 45vmin;
+        width: 30vmin;
+        height: 30vmin;
+        background-color: white;
+        z-index: 10;
+    }   
+    #square2{
+        position: absolute;
+        top: 40vmin;
+        left: 50vmin;
+        width: 20vmin;
+        height: 20vmin;
+        background-color: red;
+        z-index: 20;
+    }   
+    #square{
+        position: absolute;
+        top: 45vmin;
+        left: 55vmin;
+        width: 10vmin;
+        height: 10vmin;
+        background-color: white;
+        z-index: 30;
+        animation: wing01 4s infinite;
+    }   
+        @keyframes wing01 {
+        from{transform: rotate(0);}
+        50%{transform: rotate(360deg);}
+        to{transform: rotate(0);}
+    }
+
+    #circ{
+        position: absolute;
+        top: 45vmin;
+        left: 55vmin;
+        width: 10vmin;
+        height: 10vmin;
+        background-color: red;
+        border-radius: 50%;
+        animation: closeCirc 1s infinite;
+        z-index: 10;
+    }
+        @keyframes closeCirc {
+        from{transform: scaleY(7) scaleX(7);}
+        50%{transform: scaleY(0.1) scaleX(0.1);}
+        to{transform: scaleY(7) scaleX(7);}
+    </style>
+    
+<body>
+    <div id="globe"></div>
+    <div id="stand"></div>
+    <div id="circ"></div>
+    <div id="square3"></div>
+    <div id="square2"></div>
+    <div id="square"></div>
+
+    
+    </body>
+</html>
